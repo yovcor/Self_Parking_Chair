@@ -33,12 +33,11 @@ An IoT-based intelligent self-parking chair (CO3302 hardware project). On a hand
 SelfParkingChair/
 ├── navigate.py          # Main homing controller (camera + A* + MQTT)
 ├── <test_*.py>          # Early test scripts used to verify the robot base
-├── firmware/            # ESP32 Arduino sketch(es)
+├── esp32_mqtt_test/            # ESP32 Arduino sketch(es)
 ├── requirements.txt
 └── README.md
 ```
 
-> Update the file names above to match your actual test scripts and firmware folder.
 
 ## Getting started
 
@@ -46,7 +45,7 @@ SelfParkingChair/
 
 - Python 3.9+
 - An MQTT broker running on your network
-- ESP32 flashed with the chair firmware (see `firmware/`)
+- ESP32 flashed with the chair firmware (see `esp32_mqtt_test/`)
 
 ### Install
 
@@ -116,14 +115,3 @@ The PC publishes commands to `chair/commands` and listens on `chair/status`.
 - The chair is tracked in pixel space, so changing the camera height or angle needs recalibration.
 - Home position and tolerances are hard-coded.
 
-## Team
-
-Built for CO3302, Department of Computer Engineering, University of Sri Jayewardenepura.
-
-- `<Your name>`
-- `<Teammate name>`
-- `<Teammate name>`
-
-## License
-
-Add a license of your choice (MIT is a common default for coursework projects) or remove this section.
